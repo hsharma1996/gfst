@@ -185,6 +185,34 @@ const HomePage = () => {
 					</div>
 				</div>
 			</section>
+			<section className={styles.gf_event_section}>
+				<div className="contain">
+					<div className={styles.gf_event_grid}>
+						{events.map((evt, i) => (
+							<div className={styles.gf_event_card} key={i}>
+								<div className={styles.gf_event_image_wrap}>
+									<Image
+										src={evt.image}
+										alt={evt.title}
+										fill
+										sizes="(max-width: 600px) 100vw, 300px"
+									/>
+								</div>
+								<div className={styles.gf_event_content}>
+									<p className={styles.gf_event_date}>{evt.date}</p>
+									<h3 className={styles.gf_event_title}>{evt.title}</h3>
+									<p className={styles.gf_event_location}>{evt.location}</p>
+									<a href="/" className={styles.gf_event_link}>
+										Learn More
+										<RightArrowIcon />
+									</a>
+								</div>
+							</div>
+						))}
+					</div>
+					<button>see all events</button>
+				</div>
+			</section>
 		</>
 	)
 }
@@ -244,5 +272,29 @@ const leadership = [
         name: "Sanjay Gupta, IFS (Retd.)",
         title: "Chief Executive Officer",
         image: "/icons/team-4.jpg",
+    },
+];
+
+const events = [
+    {
+        title: "Animal Husbandry Tech/ AI 2.0",
+        location: "Vijayawada, Andhra Pradesh",
+        date: "February 12th – 13th, 2025",
+        image: "/icons/event-1.jpg",
+        link: "#",
+    },
+    {
+        title: "Tourism Conclave",
+        location: "Vijayawada, Andhra Pradesh",
+        date: "June 2025",
+        image: "/icons/event-2.jpg",
+        link: "#",
+    },
+    {
+        title: "Logistics",
+        location: "Visakhapatnam, Andhra Pradesh",
+        date: "2025",
+        image: "/icons/event-3.jpg",
+        link: "#",
     },
 ];

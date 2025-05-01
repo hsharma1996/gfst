@@ -608,3 +608,105 @@
         }   
     }
 }
+
+.gf_event_section {
+    padding: 4rem 0;
+    background-color: colormap(gf_color_bg);
+
+    .gf_event_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+
+        .gf_event_card {
+            background-color: colormap(gf_color_white);
+            border-radius: .5rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            .gf_event_image_wrap {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 1.25;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+            }
+
+            .gf_event_content {
+                padding: 1.5rem;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .gf_event_date {
+                    background-image: linear-gradient(to right bottom, #2C4DDB, #4F6FD6);
+                    color: colormap(gf_color_white);
+                    width: fit-content;
+                    padding: .375rem .75rem;
+                    border-radius: .35rem;
+                    font-weight: 400;
+                    font-size: .8rem;
+                    letter-spacing: .5px;
+                    margin-bottom: .5rem;
+                }
+
+                .gf_event_title {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    white-space: pre-line;
+                    color: rgba($color: colormap(gf_color_black), $alpha: 1);
+                    font-family: $Mulish_Font;
+                    margin-bottom: .25rem;
+                }
+
+                .gf_event_location {
+                    font-size: 1.125rem;
+                    font-weight: 200;
+                    letter-spacing: 1px;
+                    line-height: 1.4;
+                    color: rgba($color: colormap(gf_color_black), $alpha: .65);
+                }
+
+                .gf_event_link {
+                    align-self: flex-start;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    letter-spacing: .5px;
+                    color: rgba($color: colormap(gf_color_black), $alpha: .95);
+                    text-decoration: none;
+                    margin-top: 2.5rem;
+        
+                    svg {
+                        height: 1.25rem;
+                        width: 1.25rem;
+                        fill: colormap(gf_color_black);
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        padding: .75rem 1.25rem;
+        display: block;
+        font-size: 1.075rem;
+        font-weight: 600;
+        letter-spacing: .5px;
+        border-radius: .25rem;
+        color: colormap(gf_color_black);
+        background-color: colormap(gf_color_secondary);
+        margin-top: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
