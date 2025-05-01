@@ -1,15 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+/** Styles */
+import './source/styles/reset.css'
+import './source/styles/globals.scss'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+/** Next Imports */
+import { Urbanist, Mulish } from "next/font/google"
+import Footer from './source/components/common/footer';
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const Urbanist_Font = Urbanist({
+    subsets: ["latin"],
+    variable: '--Urbanist_Font'
+})
+
+const Mulish_Font = Mulish({
+    subsets: ["latin"],
+    variable: '--Mulish_Font'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -17,11 +22,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${Urbanist_Font.variable} ${Mulish_Font.variable}`}>
+				{children}
+				<Footer />
+			</body>
+		</html>
+	);
 }

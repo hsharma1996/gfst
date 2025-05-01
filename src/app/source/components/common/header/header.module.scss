@@ -1,0 +1,99 @@
+@use "sass:color";
+@use '../../../styles/_mixin' as *;
+
+.gf_header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    backdrop-filter: blur(28px);
+    background-color: rgba($color: colormap(gf_color_black), $alpha: .25);
+    transform-style: preserve-3d;
+    
+    &_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85px;
+        padding: .5rem 0;
+        font-weight: 500;
+        font-size: 1rem;
+        color: colormap(gf_color_white);
+        position: relative;
+        z-index: 100;
+    }
+}
+
+.gf_logo_wrap {
+    flex: 1;
+
+    .gf_logo {
+        position: relative;
+        width: 200px;
+        aspect-ratio: 640/179;
+        flex-shrink: 0;
+    
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.gf_nav {
+    flex: 4;
+
+    &_list {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &_item {
+
+        a {
+            text-decoration: none;
+            color: colormap(gf_color_white);
+            padding: .625rem 1.125rem;
+            display: block;
+            font-size: 1.075rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            border-radius: .5rem;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                background-color: rgba($color: colormap(gf_color_white), $alpha: .25);
+            }
+        }
+    }
+}
+
+.gf_actions {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.gf_cta_button {
+    background-color: colormap(gf_color_white);
+    color: colormap(gf_color_black);
+    padding: .75rem 1.25rem;
+    display: block;
+    font-size: 1.075rem;
+    font-weight: 600;
+    letter-spacing: .25px;
+    border-radius: .5rem;
+
+    &:hover {
+        color: rgba($color: colormap(gf_color_white), $alpha: .9);
+        background-image: linear-gradient(to right bottom, colormap(gf_color_primary), rgba(colormap(gf_color_primary), .5));
+    }
+}

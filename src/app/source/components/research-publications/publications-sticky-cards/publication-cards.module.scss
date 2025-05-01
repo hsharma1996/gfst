@@ -1,0 +1,121 @@
+/* publication-cards.module.scss */
+@use "sass:map";
+@use "sass:color";
+@use '../../../styles/_mixin' as *;
+
+.gf_publication_section {
+    position: relative;
+
+    &_wrap {
+        display: flex;
+
+        &_content {
+            width: 50%;
+            height: 100dvh;
+            padding-top: 85px;
+            position: sticky;
+            top: 0;
+            
+            &_inner {
+                padding: 1.5rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: colormap(gf_color_black);
+                    font-family: $Mulish_Font;
+                    padding: 1rem 0 2rem 0;
+                }
+
+                .gf_content {
+                    padding: 5rem 0;
+
+                    p {
+                        background-image: linear-gradient(to right bottom, #2C4DDB, #4F6FD6);
+                        color: colormap(gf_color_white);
+                        width: fit-content;
+                        padding: .375rem .75rem;
+                        border-radius: .35rem;
+                        font-weight: 400;
+                        font-size: .9rem;
+                        letter-spacing: .5px;
+                        margin-bottom: 1rem;
+                    }
+    
+                    h3 {
+                        font-size: 1.75rem;
+                        font-weight: bold;
+                        white-space: pre-line;
+                        color: rgba($color: colormap(gf_color_primary), $alpha: 1);
+                        font-family: $Mulish_Font;
+                        margin-bottom: 1rem;
+                    }
+
+                    h4 {
+                        font-size: 1.125rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        flex-grow: 1;
+                        max-width: 75%;
+                        line-height: 1.6;
+                        color: rgba($color: colormap(gf_color_black), $alpha: .65);
+                        max-width: 500px;
+                        margin-bottom: 3rem;
+                    }
+    
+                    &_link {
+                        align-self: flex-start;
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                        color: rgba($color: colormap(gf_color_black), $alpha: .95);
+                        text-decoration: none;
+            
+                        svg {
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            fill: colormap(gf_color_black);
+                        }
+                    }
+                }
+            }
+        }
+
+        &_cards_container {
+            width: 50%;
+            padding: 1.5rem 0;
+            
+            .gf_card {
+                height: calc(100dvh - 85px);
+                width: 100%;
+                padding: 1rem;
+                
+                &_wrap {
+                    padding: 5rem;
+                    background-color: colormap(gf_color_bg);
+                    width: 100%;
+                    height: 100%;
+                    
+                    .gf_img_wrap {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

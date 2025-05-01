@@ -1,0 +1,117 @@
+@use "sass:color";
+@use '../../../styles/_mixin' as *;
+
+.gf_footer {
+    background-color: colormap(gf_color_white);
+
+    &_main {
+        
+        &_wrap {
+            padding: 4rem 0;
+            display: flex;
+            gap: 7.5rem;
+
+            .gf_logo_wrap {
+                flex: 1;
+            
+                .gf_logo {
+                    position: relative;
+                    width: 300px;
+                    aspect-ratio: 640/179;
+                    flex-shrink: 0;
+                    margin-bottom: 2rem;
+                
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        object-position: top left;
+                        filter: brightness(0);
+                    }
+                }
+
+                .gf_content {
+                    padding: 1rem 0;
+                    max-width: 20rem;
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                        color: colormap(gf_color_primary);
+                        margin-bottom: .5rem;
+                    }
+    
+                    a {
+                        font-size: 1rem;
+                        letter-spacing: .5px;
+                        font-weight: 500;
+                        line-height: 1.65;
+                        color: colormap(gf_color_black);
+                    }
+                }
+            }
+            
+            .gf_links {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+
+                .gf_link_title {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    letter-spacing: .5px;
+                    color: colormap(gf_color_primary);
+                }
+
+                a {
+                    font-size: 1rem;
+                    letter-spacing: .5px;
+                    font-weight: 500;
+                    color: colormap(gf_color_black);
+                }
+            }
+        }
+
+        .gf_footer_social {
+            padding: 1.5rem 0;
+            border-top: 1px solid colormap(gf_color_border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                display: flex;
+                align-items: flex-end;
+                gap: 1.5rem;
+
+                li {
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 2rem;
+                        aspect-ratio: 1;
+                        border-radius: .5rem;
+                        background-color: colormap(gf_color_bg);
+                        border: 1px solid colormap(gf_color_border);
+
+                        svg {
+                            height: .8rem;
+                            width: .8rem;
+                            fill: colormap(gf_color_black);
+                        }
+                    }
+                }
+            }
+        }
+
+        .gf_copy {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: .25px;
+            color: colormap(gf_color_black);
+        }
+    }
+}
