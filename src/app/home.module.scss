@@ -589,6 +589,18 @@
     .gf_leadership_info {
         padding-top: 1.5rem;
 
+        .gf_leadership_badge {
+            background-image: linear-gradient(to right bottom, colormap(gf_color_secondary), color.adjust(colormap(gf_color_secondary), $lightness: 5%));
+            color: colormap(gf_color_black);
+            width: fit-content;
+            padding: .375rem .75rem;
+            border-radius: .35rem;
+            font-weight: 600;
+            font-size: .8rem;
+            letter-spacing: .25px;
+            margin-bottom: 1rem;
+        }
+
         .gf_leadership_name {
             font-size: 1.5rem;
             line-height: 1;

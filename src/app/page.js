@@ -173,6 +173,10 @@ const HomePage = () => {
 									/>
 								</div>
 								<div className={styles.gf_leadership_info}>
+									{
+										i == 0 ?
+										<p className={styles.gf_leadership_badge}>Chief Patron</p> : null
+									}
 									<h3 className={styles.gf_leadership_name}>
 										{person.name}
 									</h3>
